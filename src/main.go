@@ -20,8 +20,7 @@ var to = os.Args[4]
 var path = os.Args[5]
 
 const region = "us-east-1"
-
-var bucket = os.Getenv("BUCKET_NAME")
+const bucket = "test-upload-bucket-frontdoor"
 
 func main() {
 	sess, err := aws.Session(region)

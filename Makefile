@@ -18,9 +18,9 @@ deps: clean
 build: deps
 	go build -o dist/main ./src/main.go
 
-.PHONY: buildLinux
-buildLinux: deps
-	GOOS=linux go build -o dist/main ./src/main.go
+.PHONY: buildPi
+buildPi: deps
+	GOOS=linux GOARCH=arm GOARM=5 go build -o dist/sendText ./src/main.go
 
 .PHONY: deploy
 deploy:
